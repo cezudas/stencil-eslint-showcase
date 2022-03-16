@@ -1,0 +1,66 @@
+{
+  "root": "packages/stencil-custom-components",
+  "sourceRoot": "packages/stencil-custom-components/src",
+  "projectType": "library",
+  "generators": {
+    "@nxext/stencil:component": {
+      "style": "scss"
+    }
+  },
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nxext/stencil:test",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "packages/stencil-custom-components/tsconfig.lib.json",
+        "configPath": "packages/stencil-custom-components/stencil.config.ts",
+        "outputPath": "dist/packages/stencil-custom-components"
+      }
+    },
+    "build": {
+      "executor": "@nxext/stencil:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "packages/stencil-custom-components/tsconfig.lib.json",
+        "configPath": "packages/stencil-custom-components/stencil.config.ts",
+        "outputPath": "dist/packages/stencil-custom-components"
+      },
+      "configurations": {
+        "production": {
+          "dev": false,
+          "prod": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nxext/stencil:serve",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "packages/stencil-custom-components/tsconfig.lib.json",
+        "configPath": "packages/stencil-custom-components/stencil.config.ts",
+        "outputPath": "dist/packages/stencil-custom-components"
+      }
+    },
+    "e2e": {
+      "executor": "@nxext/stencil:e2e",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "packages/stencil-custom-components/tsconfig.lib.json",
+        "configPath": "packages/stencil-custom-components/stencil.config.ts",
+        "outputPath": "dist/packages/stencil-custom-components"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/stencil-custom-components/**/*.{ts,tsx}"]
+      }
+    }
+  }
+}

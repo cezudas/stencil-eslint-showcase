@@ -1,4 +1,6 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "stencil-custom-components": "packages/stencil-custom-components"
+  }
 }
